@@ -3096,7 +3096,7 @@ body {
     background-color: #030811;
     opacity: .5; }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .banner-video {
     height: 60vh; }
     .banner-video p {
