@@ -13,203 +13,201 @@
 		<link rel="stylesheet" href="css/styles.min.css"/>
 	</head>
 	<body>
-		<header class="cd-auto-hide-header">
-			<div class="logo"><a href="index.html"><img src="img/logo.png" alt="Logo"/></a></div>
-			<nav class="cd-primary-nav"><a class="nav-trigger" href="#cd-navigation"><span><em aria-hidden="true"></em>Menu</span></a>
-				<!-- .nav-trigger-->
-				<ul id="cd-navigation">
-					<li><a href="index.html">Inicio</a></li>
-					<li><a href="quienes-somos.html">Nosotros</a></li>
-					<li><a href="servcios.html">Servicios</a></li>
-					<li></li>
-					<li><a href="portafolio.html">Portafolio</a></li>
-				</ul>
-			</nav>
-		</header>
-		<div class="owl-carousel" id="slider-home"><img src="img/slider/slider-1.jpg"/><img src="img/slider/slider-2.jpg"/><img src="img/slider/slider-3.jpg"/><img src="img/slider/slider-4.jpg"/><img src="img/slider/slider-5.jpg"/><img src="img/slider/slider-6.jpg"/></div>
-		<section class="ptb-mx">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12 col-xs-12">
-						<h2 class="title-lg text-center mt-md">Vintec</h2>
-						<h4 class="title-sm text-center text-gray">Por que nosotros y que ofrecemos</h4>
-						<p class="text-light text-center">Somos especialista en brindar soluciones para cualquier necesidad en las áreas de desarrollo web, sistemas a medida, redes de comunicación, diseño publicitario y branding. Contamos con un excelente equipo de profesionales con más de ocho años de experiencia en el sector, aportando resultados creativos, originales y de calidad.</p>
+		<div id="app">
+			<header class="cd-auto-hide-header">
+				<div class="logo"><a href="index.html"><img src="img/logo.png" alt="Logo"/></a></div>
+				<nav class="cd-primary-nav"><a class="nav-trigger" href="#cd-navigation"><span><em aria-hidden="true"></em>Menu</span></a>
+					<!-- .nav-trigger-->
+					<ul id="cd-navigation">
+						<li><a href="index.html">Inicio</a></li>
+						<li><a href="quienes-somos.html">Nosotros</a></li>
+						<li><a href="servcios.html">Servicios</a></li>
+						<li></li>
+						<li><a href="portafolio.html">Portafolio</a></li>
+					</ul>
+				</nav>
+			</header>
+			<div class="owl-carousel" id="slider-home"><img v-for="image in portafolio" v-if="image.type=='slider'" :src="image.url"/></div>
+			<section class="ptb-mx">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12 col-xs-12">
+							<h2 class="title-lg text-center mt-md">Vintec</h2>
+							<h4 class="title-sm text-center text-gray">Por que nosotros y que ofrecemos</h4>
+							<p class="text-light text-center">Somos especialista en brindar soluciones para cualquier necesidad en las áreas de desarrollo web, sistemas a medida, redes de comunicación, diseño publicitario y branding. Contamos con un excelente equipo de profesionales con más de ocho años de experiencia en el sector, aportando resultados creativos, originales y de calidad.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12 col-xs-12">
+							<p class="text-center mt-md"><a class="button-effet" href="quienes-somos.html"><span>Quienes Somos</span>
+								<svg width="13px" height="10px" viewBox="0 0 13 10">
+									<path d="M1,5 L11,5"></path>
+									<polyline points="8 1 12 5 8 9"></polyline>
+								</svg></a></p>
+						</div>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-lg-12 col-xs-12">
-						<p class="text-center mt-md"><a class="button-effet" href="quienes-somos.html"><span>Quienes Somos</span>
-							<svg width="13px" height="10px" viewBox="0 0 13 10">
-								<path d="M1,5 L11,5"></path>
-								<polyline points="8 1 12 5 8 9"></polyline>
-							</svg></a></p>
+			</section>
+			<div class="skew-c"></div>
+			<section class="ptb-mx bg-gray-lg">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12 col-xs-12 mt-mx">
+							<h2 class="title-lg text-center mt-md">Servicios</h2>
+							<h4 class="title-sm text-center text-gray">Conoce todos los servicios que ofrecemos</h4>
+						</div>
+					</div>
+					<div class="row ptb-mx">
+						<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+							<article class="card-info">
+								<header class="card-info__header">
+									<div class="card-info__icon"><i class="icon-browser"></i></div>
+								</header>
+								<div class="card-info__body">
+									<h3 class="card-info__title">Diseño y Desarrollo</h3>
+									<h4 class="card-info__subtitle"> Sitios Web, App, Web App</h4>
+								</div>
+								<div class="card-info__caption">
+									<p class="card-info__intro">Le ofrecemos el desarrollo de cualquier tipo Web, desde diseño informativos, landing page, inmobiliarias, tienda online y mas</p>
+									<p class="card-info__read">Leer</p>
+								</div>
+							</article>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+							<article class="card-info">
+								<header class="card-info__header">
+									<div class="card-info__icon"><i class="icon-gears"></i></div>
+								</header>
+								<div class="card-info__body">
+									<h3 class="card-info__title">Instalación y Configuración</h3>
+									<h4 class="card-info__subtitle"> De Servidores</h4>
+								</div>
+								<div class="card-info__caption">
+									<p class="card-info__intro">Encuentre en VINTEC servicios de configuración para los diferentes tipos de servidor bajo Linux o Windows  para satisfacer varias necesidades.</p>
+									<p class="card-info__read">Leer</p>
+								</div>
+							</article>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+							<article class="card-info">
+								<header class="card-info__header">
+									<div class="card-info__icon"><i class="icon-tools"></i></div>
+								</header>
+								<div class="card-info__body">
+									<h3 class="card-info__title">Diseño Grafico</h3>
+									<h4 class="card-info__subtitle"> Logos, Banners, Videos</h4>
+								</div>
+								<div class="card-info__caption">
+									<p class="card-info__intro">Diseñamos de identidades y marcas, logotipos, Folletos, Pendom, Material POP, catalogos, tarjetas de presentacion, Banner Publicitarios y todo lo esencial para una empresa.</p>
+									<p class="card-info__read">Leer</p>
+								</div>
+							</article>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+							<article class="card-info">
+								<header class="card-info__header">
+									<div class="card-info__icon"><i class="icon-linegraph"></i></div>
+								</header>
+								<div class="card-info__body">
+									<h3 class="card-info__title">Instalación de Redes</h3>
+									<h4 class="card-info__subtitle"> Cableadas e Inalámbricas</h4>
+								</div>
+								<div class="card-info__caption">
+									<p class="card-info__intro">Instalamos su red Informática con los conocimientos técnicos necesarios para instalar gestionar y mantener cualquier red informática.</p>
+									<p class="card-info__read">Leer</p>
+								</div>
+							</article>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12 col-xs-12">
+							<p class="text-center mt-md"><a class="button-effet-yellow" href="#"><span>Contactanos</span>
+								<svg width="13px" height="10px" viewBox="0 0 13 10">
+									<path d="M1,5 L11,5"></path>
+									<polyline points="8 1 12 5 8 9"></polyline>
+								</svg></a></p>
+						</div>
 					</div>
 				</div>
-			</div>
-		</section>
-		<div class="skew-c"></div>
-		<section class="ptb-mx bg-gray-lg">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12 col-xs-12 mt-mx">
-						<h2 class="title-lg text-center mt-md">Servicios</h2>
-						<h4 class="title-sm text-center text-gray">Conoce todos los servicios que ofrecemos</h4>
+			</section>
+			<div class="skew-cc"></div>
+			<section class="ptb-mx">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12 col-xs-12">
+							<h2 class="title-lg text-center mt-md">Portafolio</h2>
+							<h4 class="title-sm text-center text-gray">Conoce algunos de nuestros trabajos</h4>
+						</div>
+					</div>
+					<div class="row mt-md">
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 pt-md" v-for="image in portafolio" v-if="image.home==true &amp;&amp; image.type!='logos' &amp;&amp; image.type!='slider'">
+							<div v-if="image.type=='video'"><a data-fancybox="portafolio" :href="image.url"><img class="img-responsive" :src="image.img"/></a></div>
+							<div v-else="v-else"><a data-fancybox="portafolio" :href="image.url"><img class="img-responsive" :src="image.url"/></a></div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12 col-xs-12">
+							<p class="text-center mt-md"><a class="button-effet-red" href="portafolio.html"><span>Ver mas</span>
+								<svg width="13px" height="10px" viewBox="0 0 13 10">
+									<path d="M1,5 L11,5"></path>
+									<polyline points="8 1 12 5 8 9"></polyline>
+								</svg></a></p>
+						</div>
 					</div>
 				</div>
-				<div class="row ptb-mx">
-					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-						<article class="card-info">
-							<header class="card-info__header">
-								<div class="card-info__icon"><i class="icon-browser"></i></div>
-							</header>
-							<div class="card-info__body">
-								<h3 class="card-info__title">Diseño y Desarrollo</h3>
-								<h4 class="card-info__subtitle"> Sitios Web, App, Web App</h4>
-							</div>
-							<div class="card-info__caption">
-								<p class="card-info__intro">Le ofrecemos el desarrollo de cualquier tipo Web, desde diseño informativos, landing page, inmobiliarias, tienda online y mas</p>
-								<p class="card-info__read">Leer</p>
-							</div>
-						</article>
+			</section>
+			<div class="skew-c"></div>
+			<section class="ptb-mx bg-gray-lg">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12 col-xs-12">
+							<h2 class="title-lg text-center mt-md text-primary">Nuestros Clientes</h2>
+							<h4 class="title-sm text-center text-gray">Algunas empresas con las que hemos trabajado</h4>
+						</div>
 					</div>
-					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-						<article class="card-info">
-							<header class="card-info__header">
-								<div class="card-info__icon"><i class="icon-gears"></i></div>
-							</header>
-							<div class="card-info__body">
-								<h3 class="card-info__title">Instalación y Configuración</h3>
-								<h4 class="card-info__subtitle"> De Servidores</h4>
-							</div>
-							<div class="card-info__caption">
-								<p class="card-info__intro">Encuentre en VINTEC servicios de configuración para los diferentes tipos de servidor bajo Linux o Windows  para satisfacer varias necesidades.</p>
-								<p class="card-info__read">Leer</p>
-							</div>
-						</article>
+					<div class="owl-carousel owl-theme mt-md" id="brands"><img class="img-responsive" v-for="image in portafolio" v-if="image.home==true &amp;&amp; image.type=='logos'" :src="image.url" alt=""/></div>
+				</div>
+			</section>
+			<div class="skew-cc"></div>
+			<section class="ptb-mx">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12 col-xs-12">
+							<h2 class="title-lg text-center mt-md">Contactos</h2>
+							<h4 class="title-sm text-center text-gray">Contactanos por nuestras redes o via Email</h4>
+						</div>
 					</div>
-					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-						<article class="card-info">
-							<header class="card-info__header">
-								<div class="card-info__icon"><i class="icon-tools"></i></div>
-							</header>
-							<div class="card-info__body">
-								<h3 class="card-info__title">Diseño Grafico</h3>
-								<h4 class="card-info__subtitle"> Logos, Banners, Videos</h4>
-							</div>
-							<div class="card-info__caption">
-								<p class="card-info__intro">Diseñamos de identidades y marcas, logotipos, Folletos, Pendom, Material POP, catalogos, tarjetas de presentacion, Banner Publicitarios y todo lo esencial para una empresa.</p>
-								<p class="card-info__read">Leer</p>
-							</div>
-						</article>
+					<div class="row mt-md center-lg center-xs">
+						<div class="col-lg-6">
+							<ul class="list-redes">
+								<li><a target="_blank" href="https://www.facebook.com/vintec.lab/"><i class="icon-facebook-official"></i></a></li>
+								<li><a target="_blank" href="https://twitter.com/vintec_ca"><i class="icon-twitter"></i></a></li>
+								<li><a target="_blank" href="https://www.instagram.com/vintec.lab/"><i class="icon-instagram"></i></a></li>
+								<li><a target="_blank" href="https://grupo-vintec.slack.com/messages/CF3EH9MEZ/"><i class="icon-slack"></i></a></li>
+								<li><a target="_blank" href="https://github.com/vintec-ca"><i class="icon-github"></i></a></li>
+							</ul>
+						</div>
 					</div>
-					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-						<article class="card-info">
-							<header class="card-info__header">
-								<div class="card-info__icon"><i class="icon-linegraph"></i></div>
-							</header>
-							<div class="card-info__body">
-								<h3 class="card-info__title">Instalación de Redes</h3>
-								<h4 class="card-info__subtitle"> Cableadas e Inalámbricas</h4>
-							</div>
-							<div class="card-info__caption">
-								<p class="card-info__intro">Instalamos su red Informática con los conocimientos técnicos necesarios para instalar gestionar y mantener cualquier red informática.</p>
-								<p class="card-info__read">Leer</p>
-							</div>
-						</article>
+					<div class="row mt-md center-lg center-xs">
+						<div class="col-lg-6">
+							<ul>
+								<li class="list-redes"><a href="mailto:gerencia@vintec.com.ve"><i class="icon-gmail"> </i>
+									<p class="text-normal text-gray">gerencia@vintec.com.ve</p></a></li>
+							</ul>
+						</div>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-lg-12 col-xs-12">
-						<p class="text-center mt-md"><a class="button-effet-yellow" href="#"><span>Contactanos</span>
-							<svg width="13px" height="10px" viewBox="0 0 13 10">
-								<path d="M1,5 L11,5"></path>
-								<polyline points="8 1 12 5 8 9"></polyline>
-							</svg></a></p>
+			</section>
+			<footer class="footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12 col-xs-12">
+							<p class="text-center">&copy;<span>2019</span>Todos los dereschos reservados por<span>Vintec</span></p>
+						</div>
 					</div>
 				</div>
-			</div>
-		</section>
-		<div class="skew-cc"></div>
-		<section class="ptb-mx">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12 col-xs-12">
-						<h2 class="title-lg text-center mt-md">Portafolio</h2>
-						<h4 class="title-sm text-center text-gray">Conoce algunos de nuestros trabajos</h4>
-					</div>
-				</div>
-				<div class="row mt-md">
-					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 pt-md"><a data-fancybox="webs" href="img/portafolio/web/agroarbis.jpg"><img class="img-responsive" src="img/portafolio/web/agroarbis.jpg"/></a></div>
-					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 pt-md"><a data-fancybox="webs" href="img/portafolio/web/dec-pharmacy.jpg"><img class="img-responsive" src="img/portafolio/web/dec-pharmacy.jpg"/></a></div>
-					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 pt-md"><a data-fancybox="webs" href="img/portafolio/web/lex-abogados.jpg"><img class="img-responsive" src="img/portafolio/web/lex-abogados.jpg"/></a></div>
-					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 pt-md"><a data-fancybox="webs" href="img/portafolio/minipages/duoestetica.jpg"><img class="img-responsive" src="img/portafolio/minipages/duoestetica.jpg"/></a></div>
-					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 pt-md"><a data-fancybox="webs" data-width="1000" data-height="650" href="video/duostetica.mp4"><img class="img-responsive" src="video/capture/duostetica-cap.jpg"/></a></div>
-					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 pt-md"><a data-fancybox="webs" data-width="1000" data-height="650" href="video/importadora-del-rey.mp4"><img class="img-responsive" src="video/capture/importadora-del-rey-cap.jpg"/></a></div>
-					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 pt-md"><a data-fancybox="webs" data-width="1000" data-height="650" href="video/tecnologia-digital.mp4"><img class="img-responsive" src="video/capture/tecnologia-digital-cap.jpg"/></a></div>
-					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 pt-md"><a data-fancybox="webs" href="img/portafolio/web/repuestos-millenium.jpg"><img class="img-responsive" src="img/portafolio/web/repuestos-millenium.jpg"/></a></div>
-				</div>
-				<div class="row">
-					<div class="col-lg-12 col-xs-12">
-						<p class="text-center mt-md"><a class="button-effet-red" href="portafolio.html"><span>Ver mas</span>
-							<svg width="13px" height="10px" viewBox="0 0 13 10">
-								<path d="M1,5 L11,5"></path>
-								<polyline points="8 1 12 5 8 9"></polyline>
-							</svg></a></p>
-					</div>
-				</div>
-			</div>
-		</section>
-		<div class="skew-c"></div>
-		<section class="ptb-mx bg-gray-lg">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12 col-xs-12">
-						<h2 class="title-lg text-center mt-md text-primary">Nuestros Clientes</h2>
-						<h4 class="title-sm text-center text-gray">Algunas empresas con las que hemos trabajado</h4>
-					</div>
-				</div>
-				<div class="owl-carousel owl-theme mt-md" id="brands"><img class="img-responsive" src="img/logos/logo-agroarbis.png" alt=""/><img class="img-responsive" src="img/logos/logo-alquileres-y-catering-service-elite.png" alt=""/><img class="img-responsive" src="img/logos/logo-aniversario-13.png" alt=""/><img class="img-responsive" src="img/logos/logo-cerrajeria-dr-key.png" alt=""/><img class="img-responsive" src="img/logos/logo-creatilab.png" alt=""/><img class="img-responsive" src="img/logos/logo-cv.png" alt=""/><img class="img-responsive" src="img/logos/logo-dr-juan-carlos-castilla-zambrano.png" alt=""/><img class="img-responsive" src="img/logos/logo-grupo-gaia.png" alt=""/></div>
-			</div>
-		</section>
-		<div class="skew-cc"></div>
-		<section class="ptb-mx">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12 col-xs-12">
-						<h2 class="title-lg text-center mt-md">Contactos</h2>
-						<h4 class="title-sm text-center text-gray">Contactanos por nuestras redes o via Email</h4>
-					</div>
-				</div>
-				<div class="row mt-md center-lg center-xs">
-					<div class="col-lg-6">
-						<ul class="list-redes">
-							<li><a target="_blank" href="https://www.facebook.com/vintec.lab/"><i class="icon-facebook-official"></i></a></li>
-							<li><a target="_blank" href="https://twitter.com/vintec_ca"><i class="icon-twitter"></i></a></li>
-							<li><a target="_blank" href="https://www.instagram.com/vintec.lab/"><i class="icon-instagram"></i></a></li>
-							<li><a target="_blank" href="https://grupo-vintec.slack.com/messages/CF3EH9MEZ/"><i class="icon-slack"></i></a></li>
-							<li><a target="_blank" href="https://github.com/vintec-ca"><i class="icon-github"></i></a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="row mt-md center-lg center-xs">
-					<div class="col-lg-6">
-						<ul>
-							<li class="list-redes"><a href="mailto:gerencia@vintec.com.ve"><i class="icon-gmail"> </i>
-								<p class="text-normal text-gray">gerencia@vintec.com.ve</p></a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</section>
-		<footer class="footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12 col-xs-12">
-						<p class="text-center">&copy;<span>2019</span>Todos los dereschos reservados por<span>Vintec</span></p>
-					</div>
-				</div>
-			</div>
-		</footer>
-		<script src="js/bundle.min.js"></script>
+			</footer>
+			<script src="js/bundle.min.js"></script>
+		</div>
 	</body>
 </html>
